@@ -1,8 +1,13 @@
 #message-display {
-  height: 80vh;
+  height: 30vh;
+  width: 50vw;
   overflow: auto
 }
 
+#message-form {
+  width: 50vw;
+}
+
 #message-input {
-  width: 60vw;
+  width: 400px;
 }
