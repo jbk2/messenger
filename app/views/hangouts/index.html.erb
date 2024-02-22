@@ -1,5 +1,17 @@
 <div>
-  <div id="message-display"></div>
+  <div id="message-display">
+    <% @messages.each do |message| %>
+      <article class="message">
+        <div class="message-header">
+          <p><%= message.user.email %></p>
+        </div>
+        <div class="message-body">
+          <p><%= message.body %></p>
+        </div>
+      </article>
+    <% end %>
+  </div>
+
   <div id="message-form">
     <%= form_with model: @message do |f| %>
       <div class="field has-addons">

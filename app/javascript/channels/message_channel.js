@@ -10,6 +10,7 @@ const messageChannel = consumer.subscriptions.create("MessageChannel", {
   },
 
   received(data) {
+    console.log(`Here's my data; ${data}`)
     const messageDisplay = document.querySelector('#message-display')
     messageDisplay.insertAdjacentHTML('beforeend', this.template(data))
   },
@@ -19,7 +20,7 @@ const messageChannel = consumer.subscriptions.create("MessageChannel", {
                 <p>${data.user.email}</p>
               </div>
               <div class="message-body">
-                <p>${data.message.body}</p>
+                <p>${data.body}</p>
               </div>
             </article>`
   }
